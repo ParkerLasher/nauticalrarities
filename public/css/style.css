@@ -1,0 +1,705 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex; /* Use flexbox to align children */
+  flex-direction: column;
+  /*padding-top: 20px; /* Add top padding to avoid overlap with the fixed header */
+  margin: 0;
+}
+.header {
+  position: relative; /* this is so the nav bar doesn't move with the screen. */
+  background-color: transparent;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+}
+.main-container {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  white-space: nowrap;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  margin-right: 60px;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: rgb(129, 128, 128);
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 60px; /* this is what puts space between the tabs. */
+}
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.navbar a:hover::before {
+  width: 100%;
+}
+#home-button {
+  color: rgb(0, 0, 0);
+}
+#cart-icon {
+  position: relative;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 520px;
+}
+#person-icon {
+  position: relative;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 40px;
+}
+#bars-icon {
+  position: relative;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 1248px;
+  height: 512px;
+  background-color: #bbeaed;
+  border-radius: 1em; /* rounds the border edges */
+}
+.hug-container {
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: max-content max-content 100px;
+  grid-template-rows: 200px 100px 40px;
+  grid-gap: 30px;
+
+  grid-template-areas:
+    "header header"
+    "box-1 box-2"
+    "search-bar search-bar";
+}
+.hug-header {
+  grid-area: header;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.hug-box-1 {
+  grid-area: box-1;
+  padding-left: 20px;
+}
+.hug-box-2 {
+  grid-area: box-2;
+  padding-left: 20px;
+  margin-right: 50px;
+}
+.hug-p-1 {
+  padding-left: 18px;
+  font-size: 1em;
+}
+.hug-p-2 {
+  text-align: start;
+  padding-left: 5px;
+  font-size: 1em;
+}
+.image-jenny {
+  height: 500px;
+  width: auto;
+}
+.image-guiana {
+  height: 200px;
+  width: auto;
+}
+.image-treskilling {
+  height: 200px;
+  width: auto;
+}
+.image-washington {
+  height: 200px;
+  width: auto;
+}
+.image-container {
+  position: relative;
+  justify-content: end;
+  width: 700px;
+  height: 500px;
+  background-color: transparent;
+  display: grid;
+}
+.header-one {
+  font-size: 3.8em;
+}
+.search-bar {
+  grid-area: search-bar;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  height: 50px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+#search-input{
+  height:50px;
+  width: 300px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 1220px;
+  top: 100%;
+  background-color: #bbeaed;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+.dropdown-menu a {
+  color: black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: 0;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-menu a:hover {
+  background-color: #f1f1f1
+}
+#bars-icon {
+  position: relative; /* Ensure this is here */
+}
+.see-more-button{
+  text-decoration: none;
+  color: black;
+}
+.exlpore-button{
+  text-decoration: none;
+  color: black;
+}
+.logo-image{
+  width: 200px;
+  height: 200px;
+}
+.header-logo{
+  width: 50px;
+  height: 50px;
+}
+a.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-logged-in #log-out-icon {
+  display: block;
+  margin-left: 40px;
+}
+#log-out-icon{
+  margin-left: 40px;
+}
+#home{
+  display: none;
+}
+#stamps-dropdown{
+  display: none;
+}
+#comics{
+  display: none;
+}
+@media only screen and (max-width: 768px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh; /* Or min-height: 100vh; */
+    width: max-content;
+    background-color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; /* Use flexbox to align children */
+    flex-direction: column;
+    /*padding-top: 20px; /* Add top padding to avoid overlap with the fixed header */
+    margin: 0;
+  }
+  .header {
+    position: relative; /* this is so the nav bar doesn't move with the screen. */
+    background-color: transparent;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+  }
+  .header-logo{
+    width: 150px;
+    height: 150px;
+  }
+  .logo {
+    white-space: nowrap;
+    font-size: 5em;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    margin-right: 60px;
+  }
+  .navbar a {
+    position: relative;
+    font-size: 5em;
+    color: rgb(129, 128, 128);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 60px; /* this is what puts space between the tabs. */
+  }
+  #home-button{
+    display: none;
+  }
+  #stamps{
+    display: none;
+  }
+  .comics{
+    display: none;
+  }
+  #cart-icon {
+    position: relative;
+    color: black;
+    font-size: 5em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 350px;
+  }
+  #person-icon {
+    position: relative;
+    color: black;
+    font-size: 5em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  #bars-icon {
+    position: relative;
+    color: black;
+    font-size: 5em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 1180px;
+    top: 100%;
+    background-color: #bbeaed;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  .dropdown-menu a {
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-left: 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  #home{
+    display: block;
+  }
+  #stamps-dropdown{
+    display: block;
+  }
+  #comics{
+    display: block;
+  }
+  .main-container {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+    background-color: #bbeaed;
+    border-radius: 1em; /* rounds the border edges */
+  }
+  .image-container {
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    width: max-content;
+    height: 500px;
+    background-color: transparent;
+    display: grid;
+  }
+  .image-jenny {
+    height: 500px;
+    width: auto;
+  }
+  .hug-container {
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    height: 500px;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: max-content max-content 100px;
+    grid-template-rows: max-content max-content max-content;
+    grid-gap: 30px;
+  
+    grid-template-areas:
+      "header header"
+      "box-1 box-2"
+      "search-bar search-bar";
+  }
+  .hug-box-1 {
+    grid-area: box-1;
+    padding-left: 20px;
+  }
+  .hug-box-1 > h2{
+    font-size: 4em;
+  }
+  .hug-box-2 {
+    grid-area: box-2;
+    padding-left: 20px;
+    margin-right: 50px;
+  }
+  .hug-box-2 > h2{
+    font-size: 4em;
+  }
+  .hug-p-1 {
+    padding-left: 18px;
+    font-size: 4em;
+  }
+  .hug-p-2 {
+    text-align: start;
+    padding-left: 5px;
+    font-size: 4em;
+  }
+  .search-bar {
+    grid-area: search-bar;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    height: 50px;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+  #search-input{
+    height:50px;
+    width: 300px;
+  }
+  .header-one {
+    font-size: 4em;
+  }
+  
+
+}
+@media only screen and (max-width: 480px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  html {
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  body {
+    min-height: 100vh;
+    width: 100%;
+    min-width: 320px;
+    background-color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    /*padding-top: 20px; /* Add top padding to avoid overlap with the fixed header */
+  }
+  .header {
+    position: relative; /* this is so the nav bar doesn't move with the screen. */
+    background-color: transparent;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+  }
+  .main-container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .logo {
+    white-space: nowrap;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    margin-right: 60px;
+  }
+  .navbar {
+    display: flex;
+  }
+  .navbar a {
+    position: relative;
+    font-size: 18px;
+    color: rgb(129, 128, 128);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+  }
+  .navbar a:hover::before {
+    width: 100%;
+  }
+  #home-button {
+    display: none;
+    color: rgb(0, 0, 0);
+  }
+  #stamps-button{
+    display: none;
+  }
+  #comics-button{
+    display: none;
+  }
+  #cart-icon {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 0;
+  }
+  #person-icon {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  #bars-icon {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    background-color: #bbeaed;
+    border-radius: 1em; /* rounds the border edges */
+  }
+  .hug-container {
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr .4fr;
+    grid-gap: 30px;
+  
+    grid-template-areas:
+      "header header"
+      "box-1 box-2"
+      "search-bar search-bar";
+  }
+  .hug-header {
+    grid-area: header;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .hug-box-1 {
+    grid-area: box-1;
+    padding-left: 20px;
+  }
+  .hug-box-1 > h2 {
+    font-size: 1em;
+  }
+  .hug-box-2 {
+    grid-area: box-2;
+    padding-left: 20px;
+    margin-right: 50px;
+  }
+  .hug-box-2 > h2 {
+    font-size: 1em;
+  }
+  .hug-p-1 {
+    padding-left: 18px;
+    font-size: 1em;
+  }
+  .hug-p-2 {
+    text-align: start;
+    padding-left: 5px;
+    font-size: 1em;
+  }
+  .image-jenny {
+    padding-top: 20px;
+    height: 100px;
+    width: 100%;
+  }
+  .image-guiana {
+    height: 200px;
+    width: auto;
+  }
+  .image-treskilling {
+    height: 200px;
+    width: auto;
+  }
+  .image-washington {
+    height: 200px;
+    width: auto;
+  }
+  .image-container {
+    position: relative;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+  }
+  .header-one {
+    font-size: 1.5em;
+    padding-left: 20px;
+  }
+  .search-bar {
+    grid-area: search-bar;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    height: 50px;
+    border-radius: 0.5em;
+    overflow: visible;
+    padding-bottom: 20px;
+  }
+  #search-input{
+    height:50px;
+    width: 300px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 260px;
+    top: 100%;
+    background-color: #bbeaed;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  .dropdown-menu a {
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1
+  }
+  #bars-icon {
+    position: relative; /* Ensure this is here */
+  }
+  .see-more-button{
+    text-decoration: none;
+    color: black;
+  }
+  .exlpore-button{
+    text-decoration: none;
+    color: black;
+  }
+  .logo-image{
+    width: 80px;
+    height: 80px;
+  }
+  .header-logo{
+    width: 50px;
+    height: 50px;
+  }
+  a.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

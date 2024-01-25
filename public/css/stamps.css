@@ -1,0 +1,128 @@
+
+.products-container{
+    display: grid;
+    margin-top: 80px;
+    justify-items: center;
+    width: 100%;
+    background-color: white;
+    gap: 30px;
+
+    grid-template-rows:[first-row-start] 1fr [first-row-end second-row-start] 1fr [second-row-end third-row-start] 1fr [third-row-end fourth-row-start] 1fr [fourth-row-end];
+    grid-template-columns: [first-col-start] 1fr [first-col-end second-col-start] 1fr [second-col-end third-col-start] 1fr [third-col-end fourth-col-start] 1fr [fourth-col-end];
+}
+.products{
+    background-color: #bbeaed;
+}
+.products-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: .8em;
+}
+.product-card-image{
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+}
+.product-cards-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.Scott-num{
+    text-align: center;
+    padding-left: 5px;
+}
+footer{
+    margin-top: 50px;
+}
+.next-page{
+    display: flex;
+    flex-direction: row;
+}
+.next-page > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 25px;
+    padding-right: 40px;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    gap:10px;
+    
+}
+.next-page > ul > li > a{
+    font-size: 1.2em;
+    text-decoration: none;
+}
+@media only screen and (max-width: 480px){
+    .products-container{
+        display: grid;
+        margin-top: 80px;
+        justify-items: center;
+        width: 100%;
+        background-color: white;
+        gap: 30px;
+        grid-template-rows:repeat(auto-fit, minmax(100px, auto));
+        grid-template-columns: [first-col-start] 1fr [first-col-end second-col-start] 1fr [second-col-end];
+    }
+    .products{
+        background-color: #bbeaed;
+    }
+    .products-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: solid black 1px;
+        border-radius: .8em;
+    }
+    .product-card-image{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    .product-cards-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .Scott-num{
+        text-align: center;
+        padding-left: 5px;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    .next-page{
+        display: flex;
+        flex-direction: row;
+    }
+    .next-page > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 25px;
+        padding-right: 40px;
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+        gap:10px;
+        
+    }
+    .next-page > ul > li > a{
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+}
