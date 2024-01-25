@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/68f1328681.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <title>Document</title>
+  </head>
+  <body class="<%= user ? 'user-logged-in' : 'user-logged-out' %>">
+    <header class="header">
+      <a href="/" class="logo"><img class="header-logo" src="/Images/Images/logo.png" alt="">Nautical Rarities</a>
+      <nav class="navbar">
+        <a id="home-button" href="/">Home</a>
+        <a id="stamps-button" href="stamps">Stamps</a>
+        <a id="comics-button" href="comics">Comics</a>
+
+        <a href="shoppingCart" id="cart-icon"><i class="fa-sharp fa-light fa-cart-shopping fa-sm"></i></a>
+        <% if (user) { %>
+          <a href="logout" id="log-out-icon"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket fa-sm"></i></a>
+        <% } else { %>
+          <a href="login" id="person-icon"><i class="fa-solid fa-user fa-sm"></i></a>
+        <% } %>
+        <a href="#" id="bars-icon"><i class="fa-sharp fa-light fa-bars-sort fa-sm"></i></a>
+        <div class="dropdown-menu">
+          <a id="home" href="/">Home</a>
+          <a id="stamps-dropdown" href="stamps">Stamps</a>
+          <a id="comics" href="comics">Comics</a>
+          <a href="contactUs">Contact</a>
+          <a href="#">Events</a>
+          <a href="#">About</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="main-container">
+        <div class="container">
+          <div class="hug-container">
+            <div class="hug-header">
+              <h1 class="header-one">
+                <p>Buy your</p>
+                <p>dream rarities</p>
+              </h1>
+            </div>
+            <div class="hug-box-1">
+              <h2>10,000 +</h2>
+              <p class="hug-p-1">Stamps</p>
+            </div>
+            <div class="hug-box-2">
+              <h2>1,000 +</h2>
+              <p class="hug-p-2">Customers</p>
+            </div>
+            <div class="search-bar">
+              <form action="/search" method="get" id="search-form">
+                <input type="text" name="query" id="search-input" placeholder=" What are you looking for?" />
+                <button type="submit" id="search-icon"><i class="fa-sharp fa-regular fa-magnifying-glass fa-s"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="image-container">
+            <img class="image-jenny" src="/Images/Images/US_Airmail_inverted_Jenny_24c_1918_issue.png" alt="Inverted Jenny stamp"/>
+            <!-- <img class="image-guiana" src="Images/rare-stamps-British-Guiana-1-Cent-Magenta_-British_Guiana_-1856___11.6_Million_.png" alt="British Guiana Stamp">
+                    <img class="image-treskilling" src="Images/treskilling-yellow.png" alt="Treskilling Yellow Stamp">
+                    <img class="image-washington" src="Images/z_grill_stamp_-_miller_collection.png" alt="One Cent Washington Stamp"> -->
+          </div>
+        </div>
+        <div class="second-container">
+          <!-- Featured section-->
+          <div class="featured-container">
+            <div class="featured-h">
+              <h1 class="f">Featured</h1>
+            </div>
+            <div class="see-more">
+              <a class="see-more-button" href="stamps"><p>See more</p></a>
+            </div>
+          </div>
+
+          <div class="cards cards-one">
+            <img class="card-image" src="/Images/Images/z_grill_stamp_-_miller_collection.png" alt=""/>
+            <div class="cards-info">
+              <!--<h2>Hello</h2>
+              <p class="price">$0.00</p>-->
+            </div>
+          </div>
+
+          <div class="cards cards-two">
+            <img class="card-image" src="/Images/Images/treskilling-yellow.png" alt=""/>
+            <div class="cards-info">
+              <!--<h2>Hello</h2>
+              <p class="price">$0.00</p>-->
+            </div>
+          </div>
+
+          <div class="cards cards-three">
+            <img class="card-image" src="/Images/Images/US_Airmail_inverted_Jenny_24c_1918_issue.png" alt=""/>
+            <div class="cards-info">
+              <!--<h2>Hello</h2>
+              <p class="price">$0.00</p>-->
+            </div>
+          </div>
+        </div>
+        <div class="third-container">
+          <!-- about us section-->
+
+          <div class="about-us">
+            <h1 class="us">About us</h1>
+            <p class="order">Order your dream now</p>
+          </div>
+
+          <div class="about-us-card one">
+            <div class="about-us-div">
+              <a><i class="fa-sharp fa-solid fa-list fa-2xl"></i></a>
+            </div>
+            <div class="about-us-cards-info one">
+              <h2 class="h-text-one">Large Assortment</h2>
+              <p class="text">
+                We offer many variations in each category
+              </p>
+            </div>
+          </div>
+
+          <div class="about-us-card two">
+            <div class="about-us-div">
+              <a><i class="fa-sharp fa-regular fa-box fa-2xl"></i></a>
+            </div>
+            <div class="about-us-cards-info two">
+              <h2 class="h-text-two">Fast and Free Shipping</h2>
+              <p class="text">
+                4-day or less delivery time, free shipping an expedited
+                delivery option
+              </p>
+            </div>
+          </div>
+
+          <div class="about-us-card three">
+            <div class="about-us-div-three">
+              <a id="question"><i class="fa-sharp fa-regular fa-question fa-2xl"></i></a>
+            </div>
+            <div class="about-us-cards-info-three">
+              <h2 class="h-text-three">Professional Support</h2>
+              <p class="text">Over 60 + years of experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="fourth-containter">
+          <!--Categories Section-->
+          <div class="categories">
+            <h1 class="cat-h">Categories</h1>
+            <p class="text">Find what you are looking for</p>
+          </div>
+          <img class="cat-image-one" src="/Images/Images/US_Airmail_inverted_Jenny_24c_1918_issue.png" alt=""/>
+          <div class="stamps-info">
+            <h2 class="stamps">Stamps</h2>
+          </div>
+          <img class="cat-image-two" src="/Images/Images/DSC02684.png" alt="" />
+          <div class="books-info">
+            <h2 class="books">Comic Books</h2>
+          </div>
+          <div class="explore">
+            <a class="exlpore-button" href="comics"><p>Explore</p></a> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="fifth-container">
+        <!--Footer Section-->
+        <div class="social-container">
+          <a href="#" class="logo-footer"><img class="logo-image" src="/Images/Images/logo.png" alt="logo"></a>
+          <h6 class="copyright">2023 All Right Reserved</h6>
+        </div>
+
+        <div class="contact-us-container">
+          <h1>Contact Us</h1>
+          <p>P.O Box 1515</p>
+          <p>Riviera Beach, Florida 33404</p>
+          <br />
+          <h5>Nauticalcomics@gmail.com</h5>
+        </div>
+
+        <div class="tabs-container">
+          <div class="sub-container">
+            <h5 class="tabs">Getting Started</h5>
+            <h5 class="tabs">Information</h5>
+            <h5 class="tabs">Company</h5>
+          </div>
+          <div class="sub-two">
+            <h5 class="tabs">Products</h5>
+            <h5 class="tabs">Contact</h5>
+            <h5 class="tabs">About</h5>
+          </div>
+        </div>
+
+        <div class="subscribe-container">
+          <h1>Subscribe</h1>
+          <div class="subscribe-box">
+            <p>Email</p>
+            <!--Type Email Here Box-->
+          </div>
+          <div class="subscribe-button">
+            <p>Subscribe</p>
+            <!--Blue Subscribe button-->
+          </div>
+          <div class="follow-us">
+            <h4 class="h-follow">Follow Us</h4>
+            <div class="icons">
+              <a href="#" id="facebook-icon"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+              <a href="#" id="twitter-icon"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+              <a href="#" id="instagram-icon"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
