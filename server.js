@@ -51,7 +51,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET, 
   resave: false, // will not resave session variable if nothing changed
   saveUninitialized: true, // This will create a session even for users who are not logged in
-  cookie: { secure: false } // Set to true if using HTTPS+
+  cookie: { secure: true } // Set to true if using HTTPS
 
 }))
 
